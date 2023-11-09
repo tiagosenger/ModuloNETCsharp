@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/tiago-senger-santos/Área de trabalho/NETCsharp/Semana 1/Projeto1/Projeto1.csproj",
+      "projectUniqueName": "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Semana1/Projeto1/Projeto1.csproj",
       "projectName": "Projeto1",
-      "projectPath": "/home/tiago-senger-santos/Área de trabalho/NETCsharp/Semana 1/Projeto1/Projeto1.csproj",
+      "projectPath": "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Semana1/Projeto1/Projeto1.csproj",
       "packagesPath": "/home/tiago-senger-santos/.nuget/packages/",
-      "outputPath": "/home/tiago-senger-santos/Área de trabalho/NETCsharp/Semana 1/Projeto1/obj/",
+      "outputPath": "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Semana1/Projeto1/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/tiago-senger-santos/.nuget/NuGet/NuGet.Config"
