@@ -1,0 +1,15 @@
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP01/questoes3a8/bin/Debug/net7.0/questoes3a8
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP01/questoes3a8/bin/Debug/net7.0/questoes3a8.deps.json
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP01/questoes3a8/bin/Debug/net7.0/questoes3a8.runtimeconfig.json
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP01/questoes3a8/bin/Debug/net7.0/questoes3a8.dll
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP01/questoes3a8/bin/Debug/net7.0/questoes3a8.pdb
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP01/questoes3a8/obj/Debug/net7.0/questoes3a8.csproj.AssemblyReference.cache
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP01/questoes3a8/obj/Debug/net7.0/questoes3a8.GeneratedMSBuildEditorConfig.editorconfig
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP01/questoes3a8/obj/Debug/net7.0/questoes3a8.AssemblyInfoInputs.cache
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP01/questoes3a8/obj/Debug/net7.0/questoes3a8.AssemblyInfo.cs
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP01/questoes3a8/obj/Debug/net7.0/questoes3a8.csproj.CoreCompileInputs.cache
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP01/questoes3a8/obj/Debug/net7.0/questoes3a8.dll
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP01/questoes3a8/obj/Debug/net7.0/refint/questoes3a8.dll
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP01/questoes3a8/obj/Debug/net7.0/questoes3a8.pdb
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP01/questoes3a8/obj/Debug/net7.0/questoes3a8.genruntimeconfig.cache
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP01/questoes3a8/obj/Debug/net7.0/ref/questoes3a8.dll
