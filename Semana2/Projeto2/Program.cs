@@ -40,3 +40,16 @@ for (int n = 1; n <= nivelMaximo; n++)
     Console.WriteLine();
 }
 #endregion
+
+#region Exemplo Datas
+
+string dataString = "25/10/2023";
+string[] partes = dataString.Split('/');
+
+List<string> listaData = new List<string>(partes);
+
+Console.WriteLine("Dia: " + listaData[0]);
+Console.WriteLine("Mes: " + listaData[1]);
+Console.WriteLine("Ano: " + listaData[2]);
+
+#endregion

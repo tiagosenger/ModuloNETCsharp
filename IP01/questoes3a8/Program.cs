@@ -1,4 +1,5 @@
 ﻿#region Resoluções IP 01
+
 Console.WriteLine("Questão 3:");
 double valorDouble = 10.75; //Questão 3 - Será utilizada o Convert.ToInt32 para resolver esse problema, entretanto, conversão de double para int resulta em uma truncagem da parte fracionária, e esta sendo significativa haverá perda dessa informação.
 
