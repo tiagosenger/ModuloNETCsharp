@@ -17,17 +17,30 @@ class Program {
         int limite = 100;
         int a = 0, b = 1;
 
-        Console.Write($"{a} {b} ");
+        Console.Write($"{a} \n{b} \n");
 
         while (a + b <= limite)
         {
             int proximo = a + b;
-            Console.Write($"{proximo} ");
+            Console.Write($"{proximo} \n");
             a = b;
             b = proximo;
         }
         
-        Console.Write("\n");
+        Console.Write("\nTabela: \n");
 
+        int nivelMaximo = 8;
+
+        for (int n = 1; n <= nivelMaximo; n++)
+        {
+            Console.Write($"n = {n}: ");
+
+            for (int i = 1; i <= n; i++)
+            {
+                Console.Write($"{n * i} ");
+            }
+
+            Console.WriteLine();
+        }
     }
 }
