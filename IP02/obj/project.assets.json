@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Semana2/Projeto2/Projeto2.csproj",
-      "projectName": "Projeto2",
-      "projectPath": "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Semana2/Projeto2/Projeto2.csproj",
+      "projectUniqueName": "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP02/IP02.csproj",
+      "projectName": "IP02",
+      "projectPath": "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP02/IP02.csproj",
       "packagesPath": "/home/tiago-senger-santos/.nuget/packages/",
-      "outputPath": "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Semana2/Projeto2/obj/",
+      "outputPath": "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP02/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/tiago-senger-santos/.nuget/NuGet/NuGet.Config"
