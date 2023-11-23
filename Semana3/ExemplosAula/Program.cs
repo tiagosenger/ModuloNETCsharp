@@ -1,11 +1,11 @@
-/*#region Culture Definition
+#region Culture Definition
 
 using System.Globalization;
 CultureInfo.CurrentCulture = CultureInfo.CreateSpecificCulture("pt-BR");
 
 #endregion
 
-#region Tuples Examples
+/*#region Tuples Examples
 var tuple1 = (10, 20);
 Console.WriteLine($"Tuple 1: {tuple1.Item1}, {tuple1.Item2}");
 //Tuple 1: 10, 20
@@ -96,10 +96,16 @@ Console.WriteLine($"Legal age people: {string.Join(", ", legalAge)}");
 Console.Read();
 #endregion
 
-/* #region Question 1
+#region Question 1
 
 Console.WriteLine($"{GetPerson("Helder", new DateTime(1987, 9, 24))}");
-
+string name = Console.ReadLine()!;
+try{
+   DateTime birthDate = DateTime.Parse(Console.ReadLine()!);   
+   Console.WriteLine($"{GetPerson(name, birthDate)}");
+}catch(FormatException){
+   Console.WriteLine("Formato de data inválido");
+}
 
 (string,int) GetPerson(string name, DateTime BirthDate){
    var yearsOld = DateTime.Today.Year - BirthDate.Year;
@@ -107,7 +113,7 @@ Console.WriteLine($"{GetPerson("Helder", new DateTime(1987, 9, 24))}");
    return (name, yearsOld);
 }
 
-#endregion */
+#endregion
 
 /* #region Question 2
 
@@ -167,9 +173,9 @@ int Divide(int a, int b){
    public List<string> PhoneNumbers { get; set; }
 }*/
 
-//Anteriores são do repositório do Tiago
+//Anteriores são do repositório do Helder
 
-#region Exercicios slide 9 aula 5 - Tiago Senger
+/*#region Exercicios slide 9 aula 5 - Tiago Senger
 class Tuplas{ 
    static (string, int) CriarTuplaNomeIdade(string nome, int idade){
       return (nome, idade);
@@ -197,7 +203,7 @@ class Lambda{
 }
 
 class Pessoa{
-   public string Nome { get; set; }
+   public string? Nome { get; set; }
    public int Idade { get; set; }
 }
 
@@ -237,4 +243,4 @@ class CombinacaoTuplasLambdaLinq{
         Console.WriteLine($"Altura média: {alturaMedia} cm");
    }
 }
-#endregion
+#endregion*/
