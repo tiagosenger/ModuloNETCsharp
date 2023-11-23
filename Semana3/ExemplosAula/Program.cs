@@ -1,11 +1,11 @@
-#region Culture Definition
+/*#region Culture Definition
 
 using System.Globalization;
 CultureInfo.CurrentCulture = CultureInfo.CreateSpecificCulture("pt-BR");
 
 #endregion
 
-/* #region Tuples Examples
+#region Tuples Examples
 var tuple1 = (10, 20);
 Console.WriteLine($"Tuple 1: {tuple1.Item1}, {tuple1.Item2}");
 //Tuple 1: 10, 20
@@ -53,9 +53,9 @@ string[] people = { "Helder", "Nicole", "Gilvana" };
 char letter = 'N';
 Console.WriteLine($"People with name started with '{letter}': {string.Join(", ", people.Where(x => x.StartsWith(letter)))}");
 
-#endregion */
+#endregion
 
-/* #region Linq Examples
+#region Linq Examples
 
 List<int> list = new() { 1, 2, 3, 4, 5 };
 var squaredList = list.Select(x => x * x);
@@ -94,7 +94,7 @@ Console.WriteLine($"Legal age people: {string.Join(", ", legalAge)}");
 
 
 Console.Read();
-#endregion */
+#endregion
 
 /* #region Question 1
 
@@ -138,7 +138,7 @@ finally{
    // Code that will always execute, regardless of whether an exception occurred or not
    Console.WriteLine("Finally block executed");
 }
-
+public
 int Divide(int a, int b){
    if (b == 0)
    {
@@ -150,7 +150,7 @@ int Divide(int a, int b){
 
 #endregion */
  
- public class Student{
+/* public class Student{
    public Student(int id, string fullName, string document, DateTime birthDate, List<string> phoneNumbers)
    {
       Id = id;
@@ -165,5 +165,76 @@ int Divide(int a, int b){
    public string Document { get; set; }
    public DateTime BirthDate { get; set; }
    public List<string> PhoneNumbers { get; set; }
+}*/
+
+//Anteriores são do repositório do Tiago
+
+#region Exercicios slide 9 aula 5 - Tiago Senger
+class Tuplas{ 
+   static (string, int) CriarTuplaNomeIdade(string nome, int idade){
+      return (nome, idade);
+   }   
+   static void Main(){
+      var resultado1 = CriarTuplaNomeIdade("João", 25);
+      var resultado2 = CriarTuplaNomeIdade("Maria", 30);
+
+      Console.WriteLine($"Resultado 1: {resultado1.Item1}, {resultado1.Item2} anos");
+      Console.WriteLine($"Resultado 2: {resultado2.Item1}, {resultado2.Item2} anos");
+   }
 }
 
+class Lambda{
+    static void Main()
+    {
+        Func<int, int, int> somaDosQuadrados = (a, b) => a * a + b * b;
+
+        int resultado1 = somaDosQuadrados(2, 3);
+        int resultado2 = somaDosQuadrados(4, 5);
+
+        Console.WriteLine($"Resultado 1: {resultado1}");
+        Console.WriteLine($"Resultado 2: {resultado2}");
+    }
+}
+
+class Pessoa{
+   public string Nome { get; set; }
+   public int Idade { get; set; }
+}
+
+class LinqLista{
+    static void Main(){
+        List<Pessoa> pessoas = new List<Pessoa>
+        {
+            new Pessoa { Nome = "João", Idade = 25 },
+            new Pessoa { Nome = "Maria", Idade = 35 },
+            new Pessoa { Nome = "Carlos", Idade = 40 }};
+
+        var pessoasMaisDe30 = pessoas.Where(pessoa => pessoa.Idade > 30);
+        Console.WriteLine("Pessoas com idade superior a 30:");
+        foreach (var pessoa in pessoasMaisDe30)
+        {
+            Console.WriteLine($"Nome: {pessoa.Nome}, Idade: {pessoa.Idade}");
+        }
+    }
+}
+
+class LinqArray{
+    static void Main(){
+        int[] numeros = { 5, 12, 7, 8, 3, 15, 10, 6, 9, 4 };
+        var numerosParesOrdenados = numeros.Where(numero => numero % 2 == 0).OrderByDescending(numero => numero);
+        Console.WriteLine("Números pares ordenados de forma decrescente:");
+        foreach (var numero in numerosParesOrdenados)
+        {
+            Console.WriteLine(numero);
+        }
+    }
+}
+
+class CombinacaoTuplasLambdaLinq{
+   static void Main(){
+        List<(string, int)> pessoas = new List<(string, int)>{("João", 175),("Maria", 160),("Carlos", 180),};
+        double alturaMedia = pessoas.Average(pessoa => pessoa.Item2);
+        Console.WriteLine($"Altura média: {alturaMedia} cm");
+   }
+}
+#endregion
