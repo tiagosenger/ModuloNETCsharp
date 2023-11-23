@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP02/IP02.csproj": {}
+    "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Semana3/ExemplosAula/ExemplosAula.csproj": {}
   },
   "projects": {
-    "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP02/IP02.csproj": {
+    "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Semana3/ExemplosAula/ExemplosAula.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP02/IP02.csproj",
-        "projectName": "IP02",
-        "projectPath": "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP02/IP02.csproj",
+        "projectUniqueName": "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Semana3/ExemplosAula/ExemplosAula.csproj",
+        "projectName": "ExemplosAula",
+        "projectPath": "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Semana3/ExemplosAula/ExemplosAula.csproj",
         "packagesPath": "/home/tiago-senger-santos/.nuget/packages/",
-        "outputPath": "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP02/obj/",
+        "outputPath": "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Semana3/ExemplosAula/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/tiago-senger-santos/.nuget/NuGet/NuGet.Config"

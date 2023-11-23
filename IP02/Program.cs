@@ -1,4 +1,4 @@
-﻿//Sistema de Gerenciamento de Tarefas
+//Sistema de Gerenciamento de Tarefas
 
 using System;
 using System.Collections.Generic;
