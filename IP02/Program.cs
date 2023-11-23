@@ -54,6 +54,7 @@ class Program{
             }
         }
     }
+
     static void CreateTask(){
                     
         Console.WriteLine("=== Criar Nova Tarefa ===");
@@ -80,6 +81,7 @@ class Program{
             Console.WriteLine("Formato de data inválido. Tarefa não criada.");
         }
     }
+    
     static void ListPendingTasks(){
         
         Console.WriteLine("=== Lista de Tarefas Pendentes ===");
@@ -98,37 +100,33 @@ class Program{
             Console.WriteLine("Não há tarefas pendentes.");
         }
     }
+
     static void ListCompletedTasks(){
-        // Implemente a lógica para listar tarefas concluídas
+        // a fazer
     }
 
-    static void MarkTaskAsCompleted()
-    {
-        // Implemente a lógica para marcar uma tarefa como concluída
+    static void MarkTaskAsCompleted(){
+       // a fazer
     }
 
-    static void DeleteTask()
-    {
-        // Implemente a lógica para excluir uma tarefa
+    static void DeleteTask(){
+        // a fazer
     }
 
-    static void SearchTasks()
-    {
-        // Implemente a lógica para pesquisar tarefas
+    static void SearchTasks(){
+        // a fazer
     }
 
-    static void DisplayStatistics()
-    {
-        // Implemente a lógica para exibir estatísticas
+    static void DisplayStatistics(){
+       // a fazer
     }
 }
-class Task
-{
+
+class Task{
     public string Title { get; set; }
     public string Description { get; set; }
     public DateTime DueDate { get; set; }
     public bool IsCompleted { get; set; }
     public int Id { get; set; }
     List<Task> tasks = new List<Task>();
-
 }
