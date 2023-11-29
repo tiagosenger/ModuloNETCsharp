@@ -1,0 +1,15 @@
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP03/bin/Debug/net7.0/IP03
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP03/bin/Debug/net7.0/IP03.deps.json
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP03/bin/Debug/net7.0/IP03.runtimeconfig.json
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP03/bin/Debug/net7.0/IP03.dll
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP03/bin/Debug/net7.0/IP03.pdb
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP03/obj/Debug/net7.0/IP03.csproj.AssemblyReference.cache
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP03/obj/Debug/net7.0/IP03.GeneratedMSBuildEditorConfig.editorconfig
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP03/obj/Debug/net7.0/IP03.AssemblyInfoInputs.cache
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP03/obj/Debug/net7.0/IP03.AssemblyInfo.cs
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP03/obj/Debug/net7.0/IP03.csproj.CoreCompileInputs.cache
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP03/obj/Debug/net7.0/IP03.dll
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP03/obj/Debug/net7.0/refint/IP03.dll
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP03/obj/Debug/net7.0/IP03.pdb
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP03/obj/Debug/net7.0/IP03.genruntimeconfig.cache
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/IP03/obj/Debug/net7.0/ref/IP03.dll
