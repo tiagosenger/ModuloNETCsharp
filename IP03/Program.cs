@@ -2,14 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 
-class Program
-{
+class Program{
     static List<(int, string, int, double)> estoque = new List<(int, string, int, double)>();
 
-    static void Main()
-    {
-        while (true)
-        {
+    static void Main(){
+        while (true){
             Console.WriteLine("==== Sistema de Gerenciamento de Estoque ====");
             Console.WriteLine("1. Listar Produtos");
             Console.WriteLine("2. Cadastrar Novo Produto");
@@ -20,8 +17,7 @@ class Program
 
             string? opcao = Console.ReadLine();
 
-            switch (opcao)
-            {
+            switch (opcao){
                 case "1":
                     ListarProdutos();
                     break;
@@ -47,24 +43,20 @@ class Program
         }
     }
 
-    static void ListarProdutos()
-    {
-        if (estoque.Any())
-        {
+    static void ListarProdutos(){
+        if (estoque.Any()){
             Console.WriteLine("==== Lista de Produtos ====");
             foreach (var produto in estoque)
             {
                 Console.WriteLine($"Código: {produto.Item1}, Nome: {produto.Item2}, Quantidade: {produto.Item3}, Preço: {produto.Item4:C}");
             }
         }
-        else
-        {
+        else{
             Console.WriteLine("Nenhum produto cadastrado no estoque.");
         }
     }
 
-    static void CadastrarProduto()
-    {
+    static void CadastrarProduto(){
         try
         {
             Console.Write("Digite o código do produto: ");
@@ -79,7 +71,7 @@ class Program
             Console.Write("Digite o preço unitário: ");
             double preco = double.Parse(Console.ReadLine());
 
-            estoque.Add((codigo, nome, quantidade, preco));
+            estoque.Add((codigo, nome!, quantidade, preco));
 
             Console.WriteLine("Produto cadastrado com sucesso!");
         }
@@ -93,25 +85,29 @@ class Program
         }
     }
 
-    static void ConsultarProdutoPorCodigo()
-    {
-        Console.Write("Digite o código do produto: ");
-        int codigo = int.Parse(Console.ReadLine());
+    static void ConsultarProdutoPorCodigo(){
+        try{
+            Console.Write("Digite o código do produto: ");
+            int codigo = int.Parse(Console.ReadLine());
 
-        var produto = estoque.FirstOrDefault(p => p.Item1 == codigo);
+            var produto = estoque.FirstOrDefault(p => p.Item1 == codigo);
 
-        if (produto != default)
-        {
-            Console.WriteLine($"Código: {produto.Item1}, Nome: {produto.Item2}, Quantidade: {produto.Item3}, Preço: {produto.Item4:C}");
+            if (produto != default)
+            {
+                Console.WriteLine($"Código: {produto.Item1}, Nome: {produto.Item2}, Quantidade: {produto.Item3}, Preço: {produto.Item4:C}");
+            }
+            else
+            {
+                Console.WriteLine("Produto não encontrado.");
+            }
         }
-        else
-        {
-            Console.WriteLine("Produto não encontrado.");
-        }
+        catch (FormatException){
+            Console.WriteLine("Erro: Formato inválido. Certifique-se de inserir um código válido (número inteiro).");}
+        catch (Exception ex){
+        Console.WriteLine($"Erro: {ex.Message}");}
     }
 
-    static void AtualizarEstoque()
-    {
+    static void AtualizarEstoque(){
         Console.Write("Digite o código do produto: ");
         int codigo = int.Parse(Console.ReadLine());
 
@@ -143,8 +139,8 @@ class Program
         }
     }
 
-    static void GerarRelatorios()
-    {
+    static void GerarRelatorios(){
+
         Console.WriteLine("==== Relatórios ====");
         Console.WriteLine("1. Lista de produtos com quantidade abaixo de um limite");
         Console.WriteLine("2. Lista de produtos com valor entre um mínimo e um máximo");
@@ -192,4 +188,3 @@ class Program
         }
     }
 }
-
