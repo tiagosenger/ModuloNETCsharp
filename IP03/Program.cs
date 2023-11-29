@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Sistema de Gerenciamento de Estoque
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
