@@ -17,7 +17,20 @@ class Cliente{
 
 
 class EscritorioAdvocacia{
+    private List<Advogado> advogados = new List<Advogado>();
+    private List<Cliente> clientes = new List<Cliente>();
 
+    public void AdicionarAdvogado(Advogado advogado){
+        if (advogados.Any(a => a.CPF == advogado.CPF || a.CNA == advogado.CNA)){
+            throw new ArgumentException("CPF ou CNA já cadastrados.");
+        }
+
+        advogados.Add(advogado);
+    }
+
+    public void AdicionarCliente(Cliente cliente){
+        
+    }
 }
 
 #endregion
