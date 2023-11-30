@@ -45,11 +45,32 @@ class EscritorioAdvocacia{
         return clientes.Where(c => estadoCivil.Equals(estadoCivil, StringComparison.OrdinalIgnoreCase));
     }
 
-    
+    public IEnumerable<Cliente> ClientesEmOrdemAlfabetica(){
+        return clientes.OrderBy(c => c.Nome);
+    }
+
+    public IEnumerable<Cliente> ClientesPorProfissao(string textoProfissao){
+        return clientes.Where(c => c.Profissao.Contains(textoProfissao, StringComparison.OrdinalIgnoreCase));
+    }
+
+    public IEnumerable<object> AniversariantesDoMes(int mes){
+        return advogados.Concat(clientes)
+            .Where(p => p.DataNascimento.Month == mes)
+            .OrderBy(p => p.DataNascimento.Day);
+    }
+
+    private int CalculaIdade(DateTime dataNascimento){
+        int idade = DateTime.Now.Year - dataNascimento.Year;
+        if (DateTime.Now.Month < dataNascimento.Month || (DateTime.Now.Month == dataNascimento.Month && DateTime.Now.Day < dataNascimento.Day)){
+            idade--;
+        }
+
+        return idade;
+    }
 }
 
-class Program{
+/*class Program{
 
-}
+}*/
 
 #endregion
