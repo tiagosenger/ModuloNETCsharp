@@ -1,0 +1,15 @@
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Av1Individual/bin/Debug/net7.0/Av1Individual
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Av1Individual/bin/Debug/net7.0/Av1Individual.deps.json
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Av1Individual/bin/Debug/net7.0/Av1Individual.runtimeconfig.json
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Av1Individual/bin/Debug/net7.0/Av1Individual.dll
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Av1Individual/bin/Debug/net7.0/Av1Individual.pdb
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Av1Individual/obj/Debug/net7.0/Av1Individual.csproj.AssemblyReference.cache
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Av1Individual/obj/Debug/net7.0/Av1Individual.GeneratedMSBuildEditorConfig.editorconfig
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Av1Individual/obj/Debug/net7.0/Av1Individual.AssemblyInfoInputs.cache
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Av1Individual/obj/Debug/net7.0/Av1Individual.AssemblyInfo.cs
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Av1Individual/obj/Debug/net7.0/Av1Individual.csproj.CoreCompileInputs.cache
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Av1Individual/obj/Debug/net7.0/Av1Individual.dll
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Av1Individual/obj/Debug/net7.0/refint/Av1Individual.dll
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Av1Individual/obj/Debug/net7.0/Av1Individual.pdb
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Av1Individual/obj/Debug/net7.0/Av1Individual.genruntimeconfig.cache
+/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Av1Individual/obj/Debug/net7.0/ref/Av1Individual.dll
