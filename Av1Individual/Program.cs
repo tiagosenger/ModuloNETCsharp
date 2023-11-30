@@ -69,8 +69,38 @@ class EscritorioAdvocacia{
     }
 }
 
+
+class Operacoes{
+    public static void AdicionarAdvogado(EscritorioAdvocacia escritorio){
+        try{
+            Advogado advogado = new Advogado();
+
+            Console.WriteLine("=====CADASTRO DE ADVOGADO(A)=====");
+            
+            Console.WriteLine("Nome: ");
+            advogado.Nome = Console.ReadLine();
+
+            Console.WriteLine("Data de Nascimento (yyyy-mm-dd): ");
+            advogado.DataNascimento = DateTime.Parse(Console.ReadLine());
+            
+            Console.WriteLine("CPF: ");
+            advogado.CPF = Console.ReadLine();
+            
+            Console.WriteLine("CNA: ");
+            advogado.CNA = Console.ReadLine();
+
+            escritorio.AdicionarAdvogado(advogado);
+            Console.WriteLine("Advogado cadastrado com sucesso!");
+        }
+        catch(Exception ex){
+            Console.WriteLine($"Erro ao cadastrar advogado: {ex.Message}");
+        }
+    }
+
+}
 class Program{
     static void Main(){
+
         EscritorioAdvocacia escritorio = new EscritorioAdvocacia();
 
         while(true){
@@ -89,7 +119,7 @@ class Program{
                 case "1":
                     AdicionarAdvogado(escritorio);
                     break;
-                case "2":
+                /*case "2":
                     AdicionarCliente(escritorio);
                     break;
                 case "3":
@@ -100,7 +130,7 @@ class Program{
                     break;
                 case "5":
                     ExibirRelatorios(escritorio);
-                    break;
+                    break;*/
                 case "6":
                     Console.WriteLine("Encerrando programa.");
                     return;
@@ -110,7 +140,6 @@ class Program{
             }
         }
     }
-
 }
 
 #endregion
