@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Semana4/ExerciciosAula/ExerciciosAula/ExerciciosAula.csproj": {}
+    "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Semana4/ExerciciosAula/ExerciciosAula.csproj": {}
   },
   "projects": {
-    "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Semana4/ExerciciosAula/ExerciciosAula/ExerciciosAula.csproj": {
+    "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Semana4/ExerciciosAula/ExerciciosAula.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Semana4/ExerciciosAula/ExerciciosAula/ExerciciosAula.csproj",
+        "projectUniqueName": "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Semana4/ExerciciosAula/ExerciciosAula.csproj",
         "projectName": "ExerciciosAula",
-        "projectPath": "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Semana4/ExerciciosAula/ExerciciosAula/ExerciciosAula.csproj",
+        "projectPath": "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Semana4/ExerciciosAula/ExerciciosAula.csproj",
         "packagesPath": "/home/tiago-senger-santos/.nuget/packages/",
-        "outputPath": "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Semana4/ExerciciosAula/ExerciciosAula/obj/",
+        "outputPath": "/home/tiago-senger-santos/Área de trabalho/ModuloNETCsharp/Semana4/ExerciciosAula/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/tiago-senger-santos/.nuget/NuGet/NuGet.Config"
