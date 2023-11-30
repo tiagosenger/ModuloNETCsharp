@@ -69,7 +69,91 @@ class EscritorioAdvocacia{
     }
 }
 
-class Relatorios{}
+class Relatorios{
+    public static void RelatorioAdvogadosComIdade(EscritorioAdvocacia escritorio){
+        Console.Write("Informe a idade mínima: ");
+        int idadeMinima = int.Parse(Console.ReadLine());
+
+        Console.Write("Informe a idade máxima: ");
+        int idadeMaxima = int.Parse(Console.ReadLine());
+
+        var advogados = escritorio.AdvogadosComIdadeEntre(idadeMinima, idadeMaxima);
+
+        Console.WriteLine($"\nAdvogados com idade entre {idadeMinima} e {idadeMaxima} anos:");
+        foreach (var advogado in advogados)
+        {
+            Console.WriteLine($"Nome: {advogado.Nome}, CPF: {advogado.CPF}, CNA: {advogado.CNA}");
+        }
+    }
+
+    public static void RelatorioClientesComIdade(EscritorioAdvocacia escritorio){
+
+        Console.Write("Informe a idade mínima: ");
+        int idadeMinima = int.Parse(Console.ReadLine());
+
+        Console.Write("Informe a idade máxima: ");
+        int idadeMaxima = int.Parse(Console.ReadLine());
+
+        var clientes = escritorio.ClientesComIdadeEntre(idadeMinima, idadeMaxima);
+
+        Console.WriteLine($"\nClientes com idade entre {idadeMinima} e {idadeMaxima} anos:");
+        foreach (var cliente in clientes)
+        {
+            Console.WriteLine($"Nome: {cliente.Nome}, CPF: {cliente.CPF}, Estado Civil: {cliente.EstadoCivil}, Profissão: {cliente.Profissao}");
+        }
+    }
+
+    public static void RelatorioClientesPorEstadoCivil(EscritorioAdvocacia escritorio){
+
+        Console.Write("Informe o estado civil desejado: ");
+        string estadoCivil = Console.ReadLine();
+
+        var clientes = escritorio.ClientesPorEstadoCivil(estadoCivil);
+
+        Console.WriteLine($"\nClientes com estado civil {estadoCivil}:");
+        foreach (var cliente in clientes)
+        {
+            Console.WriteLine($"Nome: {cliente.Nome}, CPF: {cliente.CPF}, Estado Civil: {cliente.EstadoCivil}, Profissão: {cliente.Profissao}");
+        }
+    }
+
+    public static void RelatorioClientesEmOrdemAlfabetica(EscritorioAdvocacia escritorio){
+        var clientes = escritorio.ClientesEmOrdemAlfabetica();
+
+        Console.WriteLine("\nClientes em ordem alfabética:");
+        foreach (var cliente in clientes)
+        {
+            Console.WriteLine($"Nome: {cliente.Nome}, CPF: {cliente.CPF}, Estado Civil: {cliente.EstadoCivil}, Profissão: {cliente.Profissao}");
+        }
+    }
+
+    public static void RelatorioClientesPorProfissao(EscritorioAdvocacia escritorio){
+        Console.Write("Informe o texto da profissão desejada: ");
+        string textoProfissao = Console.ReadLine();
+
+        var clientes = escritorio.ClientesPorProfissao(textoProfissao);
+
+        Console.WriteLine($"\nClientes cuja profissão contém '{textoProfissao}':");
+        foreach (var cliente in clientes)
+        {
+            Console.WriteLine($"Nome: {cliente.Nome}, CPF: {cliente.CPF}, Estado Civil: {cliente.EstadoCivil}, Profissão: {cliente.Profissao}");
+        }
+    }
+
+    public static void RelatorioAniversariantesDoMes(EscritorioAdvocacia escritorio)
+    {
+        Console.Write("Informe o mês desejado (1 a 12): ");
+        int mes = int.Parse(Console.ReadLine());
+
+        var aniversariantes = escritorio.AniversariantesDoMes(mes);
+
+        Console.WriteLine($"\nAdvogados e Clientes aniversariantes do mês {mes}:");
+        foreach (var pessoa in aniversariantes)
+        {
+            Console.WriteLine($"Nome: {pessoa.Nome}, CPF: {pessoa.CPF}");
+        }
+    }
+}
 
 class Operacoes{
     public static void AdicionarAdvogado(EscritorioAdvocacia escritorio){
