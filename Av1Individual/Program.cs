@@ -33,11 +33,23 @@ class EscritorioAdvocacia{
         clientes.Add(cliente);    
     }
 // Métodos dos Relatórios Solicitados:
-    public IEnumerable<Advogado>
+    public IEnumerable<Advogado> AdvogadosComIdadeEntre(int idadeMinima, int idadeMaxima){
+        return advogados.Where(a => CalculaIdade(a.DataNascimento) >= idadeMinima && CalculaIdade(a.DataNascimento) <= idadeMaxima);
+    }
+
+    public IEnumerable<Cliente> ClientesComIdadeEntre(int idadeMinima, int idadeMaxima){
+        return clientes.Where(c => CalculaIdade(c.DataNascimento) >= idadeMinima && CalculaIdade(c.DataNascimento) <= idadeMaxima);
+    }
+
+    public IEnumerable<Cliente> ClientesPorEstadoCivil(string estadoCivil){
+        return clientes.Where(c => estadoCivil.Equals(estadoCivil, StringComparison.OrdinalIgnoreCase));
+    }
+
+    
 }
 
 class Program{
-    
+
 }
 
 #endregion
