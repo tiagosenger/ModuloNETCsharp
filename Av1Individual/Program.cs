@@ -97,6 +97,49 @@ class Operacoes{
         }
     }
 
+    public static void AdicionarCliente(EscritorioAdvocacia escritorio){
+        try{
+            Cliente cliente = new Cliente();
+            Console.WriteLine("=====CADASTRO DE CLIENTE=====");
+            
+            Console.WriteLine("Nome: ");
+            cliente.Nome = Console.ReadLine();
+
+            Console.Write("Data de Nascimento (yyyy-MM-dd): ");
+            cliente.DataNascimento = DateTime.Parse(Console.ReadLine());
+
+            Console.Write("CPF: ");
+            cliente.CPF = Console.ReadLine();
+
+            Console.Write("Estado Civil: ");
+            cliente.EstadoCivil = Console.ReadLine();
+
+            Console.Write("Profissão: ");
+            cliente.Profissao = Console.ReadLine();
+
+            escritorio.AdicionarCliente(cliente);
+            Console.WriteLine("Cliente cadastrado com sucesso!");
+        }
+        catch(Exception ex){
+            Console.WriteLine($"Erro ao cadastrar cliente: {ex.Message}");
+        }
+    }
+
+    public static void ConsultarAdvogados(EscritorioAdvocacia escritorio){
+        Console.WriteLine("=====CONSULTA DE ADVOGADOS=====");
+        foreach (var advogado in escritorio.AdvogadosComIdadeEntre(0, int.MaxValue)){
+            Console.WriteLine($"Nome: {advogado.Nome}, CPF: {advogado.CPF}, CNA: {advogado.CNA}");
+        }
+    }
+
+    public static void ConsultarClientes(EscritorioAdvocacia escritorio){
+        Console.WriteLine("=====CONSULTA DE CLIENTES=====");
+        foreach (var cliente in escritorio.ClientesComIdadeEntre(0, int.MaxValue)){
+        Console.WriteLine($"Nome: {cliente.Nome}, CPF: {cliente.CPF}, Estado Civil: {cliente.EstadoCivil}, Profissão: {cliente.Profissao}");
+        }
+    }   
+
+
 }
 class Program{
     static void Main(){
@@ -119,7 +162,7 @@ class Program{
                 case "1":
                     AdicionarAdvogado(escritorio);
                     break;
-                /*case "2":
+                case "2":
                     AdicionarCliente(escritorio);
                     break;
                 case "3":
@@ -128,7 +171,7 @@ class Program{
                 case "4":
                     CansultarClientes(escritorio);
                     break;
-                case "5":
+                /*case "5":
                     ExibirRelatorios(escritorio);
                     break;*/
                 case "6":
@@ -141,5 +184,4 @@ class Program{
         }
     }
 }
-
 #endregion
