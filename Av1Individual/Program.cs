@@ -54,9 +54,9 @@ class EscritorioAdvocacia{
     }
 
     public IEnumerable<object> AniversariantesDoMes(int mes){
-        return advogados.Concat(clientes)
-            .Where(p => p.DataNascimento.Month == mes)
-            .OrderBy(p => p.DataNascimento.Day);
+        return advogados.Cast<object>().Concat(clientes.Cast<object>())
+        .Where(p => ((dynamic)p).DataNascimento.Month == mes)
+        .OrderBy(p => ((dynamic)p).DataNascimento.Day);
     }
 
     private int CalculaIdade(DateTime dataNascimento){
@@ -72,10 +72,10 @@ class EscritorioAdvocacia{
 class Relatorios{
     public static void RelatorioAdvogadosComIdade(EscritorioAdvocacia escritorio){
         Console.Write("Informe a idade mínima: ");
-        int idadeMinima = int.Parse(Console.ReadLine());
+        int idadeMinima = int.Parse(Console.ReadLine()!);
 
         Console.Write("Informe a idade máxima: ");
-        int idadeMaxima = int.Parse(Console.ReadLine());
+        int idadeMaxima = int.Parse(Console.ReadLine()!);
 
         var advogados = escritorio.AdvogadosComIdadeEntre(idadeMinima, idadeMaxima);
 
@@ -89,10 +89,10 @@ class Relatorios{
     public static void RelatorioClientesComIdade(EscritorioAdvocacia escritorio){
 
         Console.Write("Informe a idade mínima: ");
-        int idadeMinima = int.Parse(Console.ReadLine());
+        int idadeMinima = int.Parse(Console.ReadLine()!);
 
         Console.Write("Informe a idade máxima: ");
-        int idadeMaxima = int.Parse(Console.ReadLine());
+        int idadeMaxima = int.Parse(Console.ReadLine()!);
 
         var clientes = escritorio.ClientesComIdadeEntre(idadeMinima, idadeMaxima);
 
@@ -106,7 +106,7 @@ class Relatorios{
     public static void RelatorioClientesPorEstadoCivil(EscritorioAdvocacia escritorio){
 
         Console.Write("Informe o estado civil desejado: ");
-        string estadoCivil = Console.ReadLine();
+        string estadoCivil = Console.ReadLine()!;
 
         var clientes = escritorio.ClientesPorEstadoCivil(estadoCivil);
 
@@ -129,7 +129,7 @@ class Relatorios{
 
     public static void RelatorioClientesPorProfissao(EscritorioAdvocacia escritorio){
         Console.Write("Informe o texto da profissão desejada: ");
-        string textoProfissao = Console.ReadLine();
+        string textoProfissao = Console.ReadLine()!;
 
         var clientes = escritorio.ClientesPorProfissao(textoProfissao);
 
@@ -143,14 +143,14 @@ class Relatorios{
     public static void RelatorioAniversariantesDoMes(EscritorioAdvocacia escritorio)
     {
         Console.Write("Informe o mês desejado (1 a 12): ");
-        int mes = int.Parse(Console.ReadLine());
+        int mes = int.Parse(Console.ReadLine()!);
 
         var aniversariantes = escritorio.AniversariantesDoMes(mes);
 
         Console.WriteLine($"\nAdvogados e Clientes aniversariantes do mês {mes}:");
         foreach (var pessoa in aniversariantes)
         {
-            Console.WriteLine($"Nome: {pessoa.Nome}, CPF: {pessoa.CPF}");
+            Console.WriteLine($"Nome: {((dynamic)pessoa).Nome}, CPF: {((dynamic)pessoa).CPF}");
         }
     }
 }
@@ -163,16 +163,16 @@ class Operacoes{
             Console.WriteLine("=====CADASTRO DE ADVOGADO(A)=====");
             
             Console.WriteLine("Nome: ");
-            advogado.Nome = Console.ReadLine();
+            advogado.Nome = Console.ReadLine()!;
 
             Console.WriteLine("Data de Nascimento (yyyy-mm-dd): ");
-            advogado.DataNascimento = DateTime.Parse(Console.ReadLine());
+            advogado.DataNascimento = DateTime.Parse(Console.ReadLine()!);
             
             Console.WriteLine("CPF: ");
-            advogado.CPF = Console.ReadLine();
+            advogado.CPF = Console.ReadLine()!;
             
             Console.WriteLine("CNA: ");
-            advogado.CNA = Console.ReadLine();
+            advogado.CNA = Console.ReadLine()!;
 
             escritorio.AdicionarAdvogado(advogado);
             Console.WriteLine("Advogado cadastrado com sucesso!");
@@ -188,19 +188,19 @@ class Operacoes{
             Console.WriteLine("=====CADASTRO DE CLIENTE=====");
             
             Console.WriteLine("Nome: ");
-            cliente.Nome = Console.ReadLine();
+            cliente.Nome = Console.ReadLine()!;
 
             Console.Write("Data de Nascimento (yyyy-MM-dd): ");
-            cliente.DataNascimento = DateTime.Parse(Console.ReadLine());
+            cliente.DataNascimento = DateTime.Parse(Console.ReadLine()!);
 
             Console.Write("CPF: ");
-            cliente.CPF = Console.ReadLine();
+            cliente.CPF = Console.ReadLine()!;
 
             Console.Write("Estado Civil: ");
-            cliente.EstadoCivil = Console.ReadLine();
+            cliente.EstadoCivil = Console.ReadLine()!;
 
             Console.Write("Profissão: ");
-            cliente.Profissao = Console.ReadLine();
+            cliente.Profissao = Console.ReadLine()!;
 
             escritorio.AdicionarCliente(cliente);
             Console.WriteLine("Cliente cadastrado com sucesso!");
@@ -277,7 +277,7 @@ class Program{
             Console.WriteLine("6. Sair");
 
             Console.WriteLine("\nEscolha uma opção: ");
-            string? opcao = Console.ReadLine();
+            string opcao = Console.ReadLine()!;
 
             switch (opcao){
                 case "1":
@@ -305,4 +305,5 @@ class Program{
         }
     }
 }
+
 #endregion
