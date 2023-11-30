@@ -33,7 +33,11 @@ class EscritorioAdvocacia{
         clientes.Add(cliente);    
     }
 // Métodos dos Relatórios Solicitados:
-    public 
+    public IEnumerable<Advogado>
+}
+
+class Program{
+    
 }
 
 #endregion
