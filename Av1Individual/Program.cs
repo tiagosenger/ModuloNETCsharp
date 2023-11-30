@@ -70,6 +70,7 @@ class EscritorioAdvocacia{
 }
 
 class Relatorios{}
+
 class Operacoes{
     public static void AdicionarAdvogado(EscritorioAdvocacia escritorio){
         try{
@@ -153,22 +154,22 @@ class Operacoes{
 
         switch (opcaoRelatorio){
             case "1":
-                RelatorioAdvogadosComIdade(escritorio);
+                Relatorios.RelatorioAdvogadosComIdade(escritorio);
                 break;
             case "2":
-                RelatorioClientesComIdade(escritorio);
+                Relatorios.RelatorioClientesComIdade(escritorio);
                 break;
             case "3":
-                RelatorioClientesPorEstadoCivil(escritorio);
+                Relatorios.RelatorioClientesPorEstadoCivil(escritorio);
                 break;
             case "4":
-                RelatorioClientesEmOrdemAlfabetica(escritorio);
+                Relatorios.RelatorioClientesEmOrdemAlfabetica(escritorio);
                 break;
             case "5":
-                RelatorioClientesPorProfissao(escritorio);
+                Relatorios.RelatorioClientesPorProfissao(escritorio);
                 break;
             case "6":
-                RelatorioAniversariantesDoMes(escritorio);
+                Relatorios.RelatorioAniversariantesDoMes(escritorio);
                 break;
             default:
                 Console.WriteLine("Opção inválida. Retornando ao menu principal.");
@@ -176,6 +177,7 @@ class Operacoes{
         }
     }
 }
+
 class Program{
     static void Main(){
 
@@ -195,19 +197,19 @@ class Program{
 
             switch (opcao){
                 case "1":
-                    AdicionarAdvogado(escritorio);
+                    Operacoes.AdicionarAdvogado(escritorio);
                     break;
                 case "2":
-                    AdicionarCliente(escritorio);
+                    Operacoes.AdicionarCliente(escritorio);
                     break;
                 case "3":
-                    ConsultarAdvogados(escritorio);
+                    Operacoes.ConsultarAdvogados(escritorio);
                     break;
                 case "4":
-                    CansultarClientes(escritorio);
+                    Operacoes.ConsultarClientes(escritorio);
                     break;
                 case "5":
-                    ExibirRelatorios(escritorio);
+                    Operacoes.ExibirRelatorios(escritorio);
                     break;
                 case "6":
                     Console.WriteLine("Encerrando programa.");
