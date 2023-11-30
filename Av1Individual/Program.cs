@@ -69,8 +69,48 @@ class EscritorioAdvocacia{
     }
 }
 
-/*class Program{
+class Program{
+    static void Main(){
+        EscritorioAdvocacia escritorio = new EscritorioAdvocacia();
 
-}*/
+        while(true){
+            Console.WriteLine("\n=====MENU=====");
+            Console.WriteLine("1. Cadastrar Advogado(a)");
+            Console.WriteLine("2. Cadastrar Cliente");
+            Console.WriteLine("3. Consultar Advogados(as) Cadastrados(as)");
+            Console.WriteLine("4. Consultar Clientes Cadastrados(as)");
+            Console.WriteLine("5. Relatórios");
+            Console.WriteLine("6. Sair");
+
+            Console.WriteLine("\nEscolha uma opção: ");
+            string opcao = Console.ReadLine();
+
+            switch (opcao){
+                case "1":
+                    AdicionarAdvogado(escritorio);
+                    break;
+                case "2":
+                    AdicionarCliente(escritorio);
+                    break;
+                case "3":
+                    ConsultarAdvogados(escritorio);
+                    break;
+                case "4":
+                    CansultarClientes(escritorio);
+                    break;
+                case "5":
+                    ExibirRelatorios(escritorio);
+                    break;
+                case "6":
+                    Console.WriteLine("Encerrando programa.");
+                    return;
+                default:
+                    Console.WriteLine("Opção inválida. Tente novamente.");
+                    break;
+            }
+        }
+    }
+
+}
 
 #endregion
