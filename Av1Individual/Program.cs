@@ -69,7 +69,7 @@ class EscritorioAdvocacia{
     }
 }
 
-
+class Relatorios{}
 class Operacoes{
     public static void AdicionarAdvogado(EscritorioAdvocacia escritorio){
         try{
@@ -139,7 +139,42 @@ class Operacoes{
         }
     }   
 
+    public static void ExibirRelatorios(EscritorioAdvocacia escritorio){
+        Console.WriteLine("=====RELATORIOS=====");
+        Console.WriteLine("1. Advogados com idade entre dois valores");
+        Console.WriteLine("2. Clientes com idade entre dois valores");
+        Console.WriteLine("3. Clientes com estado civil informado pelo usuário");
+        Console.WriteLine("4. Clientes em ordem alfabética");
+        Console.WriteLine("5. Clientes cuja profissão contenha texto informado pelo usuário");
+        Console.WriteLine("6. Advogados e Clientes aniversariantes do mês informado");
 
+        Console.WriteLine("\nEscolha uma opção: ");
+        string? opcaoRelatorio = Console.ReadLine();
+
+        switch (opcaoRelatorio){
+            case "1":
+                RelatorioAdvogadosComIdade(escritorio);
+                break;
+            case "2":
+                RelatorioClientesComIdade(escritorio);
+                break;
+            case "3":
+                RelatorioClientesPorEstadoCivil(escritorio);
+                break;
+            case "4":
+                RelatorioClientesEmOrdemAlfabetica(escritorio);
+                break;
+            case "5":
+                RelatorioClientesPorProfissao(escritorio);
+                break;
+            case "6":
+                RelatorioAniversariantesDoMes(escritorio);
+                break;
+            default:
+                Console.WriteLine("Opção inválida. Retornando ao menu principal.");
+                break;
+        }
+    }
 }
 class Program{
     static void Main(){
@@ -156,7 +191,7 @@ class Program{
             Console.WriteLine("6. Sair");
 
             Console.WriteLine("\nEscolha uma opção: ");
-            string opcao = Console.ReadLine();
+            string? opcao = Console.ReadLine();
 
             switch (opcao){
                 case "1":
@@ -171,9 +206,9 @@ class Program{
                 case "4":
                     CansultarClientes(escritorio);
                     break;
-                /*case "5":
+                case "5":
                     ExibirRelatorios(escritorio);
-                    break;*/
+                    break;
                 case "6":
                     Console.WriteLine("Encerrando programa.");
                     return;
